@@ -1,73 +1,74 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Oct 26 04:25:43 2017
+Created on Thu Oct 21 04:25:43 2017
 
-@author: merb
+@author: team_31 ((Nabanita Roy)17305618, (Abhimanyu Hazarika)17314158, (Bhavik Mer)17304936)
 """
-import process_dataset
-import pandas as pd
+
 import numpy as np
-from sklearn.model_selection import cross_validate
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-from sklearn.linear_model import LogisticRegression
-from sklearn.neighbors import KNeighborsRegressor
-from sklearn import metrics
-from sklearn.tree import DecisionTreeClassifier
+import config
+from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor
+from sklearn.metrics import accuracy_score, log_loss, precision_score, f1_score
+from sklearn import preprocessing
+from sklearn import linear_model
+from sklearn.model_selection import StratifiedKFold, cross_val_score,cross_val_predict
+import math
 
-    
-def split(model, x, y, algorithm):
-    x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.3)
-    model.fit(x_train, y_train)
-
-    y_predict = model.predict(x_test)
-    if algorithm == "classification":
-        print "Accuracy score:",metrics.accuracy_score(y_test,y_predict)
-        print "F1 score:", metrics.f1_score(y_test,y_predict,average="micro")
-    elif algorithm == "regression":
-        print "Root mean squared error:", np.sqrt(metrics.mean_squared_error(y_test,y_predict))
-        print "Mean absolute error:", metrics.mean_absolute_error(y_test, y_predict)
-
-def cross_valid(regression_model, x, y, scoring):
-    scores = cross_validate(regression_model, x, np.squeeze(y), cv=10, scoring=scoring)
-
-    for score in scoring:
-        if score == "neg_mean_squared_error":
-            print "Root mean square error value: ",np.sqrt(-scores['test_' + score].mean())
-        elif score == "neg_mean_absolute_error":
-            print "Mean Absolute Error value:", (-scores['test_' + score].mean())
-        else:
-            print score ,"value: ",scores['test_' + score].mean()
-
-def execute_algorithm(ds, name, chunk_size, algorithm):
-    if algorithm == "classification":
-        x, y = process_dataset.process_dataset(ds, name, "classification")
-        scoring = ['accuracy', 'f1_macro']
-        print "Logistic Regression"
-        cross_valid(LogisticRegression(), x, y, scoring)       # Logistic Regression
-        print "Decision tree classifier"
-        regression_model = DecisionTreeClassifier() 
-        
-    if algorithm == "regression":
-        x, y = process_dataset.process_dataset(ds, name, "regression")
-        scoring = ['neg_mean_squared_error', 'neg_mean_absolute_error']
-        print "Linear Regression"
-        split(LinearRegression(), x, y, algorithm)    # Linear Regression
-        print "KNN"
-        regression_model = KNeighborsRegressor(n_neighbors=2)  # SGDRegressor
-
-    assert x.size != 0 and y.size != 0
-    if chunk_size < 50000:
-        cross_valid(regression_model, x, y, scoring)
-    else:
-        split(regression_model, x, y, algorithm)
+def compute_metrics_regression(X, y, regressionAlgo):
+    MSE = -cross_val_score(regressionAlgo, X, y, cv=10, scoring='neg_mean_squared_error')
+    print ("RMSE: %0.5f" %(np.sqrt(np.abs(MSE.mean()))))
+    scoresR2 = cross_val_score(regressionAlgo, X, y, cv=10, scoring='r2').mean()
+    print ("R2: %0.5f"  %(scoresR2.mean()))
     print "\n"
 
-
-
-
-
+def compute_metrics_classification(X, y, classificationAlgo):
+    y_pred = cross_val_predict(classificationAlgo, X, y, cv=10)
+    print "Accuracy: " ,accuracy_score(y, y_pred)
+    print "Log-loss: ",log_loss(y, cross_val_predict(classificationAlgo, X, y, cv=10, method='predict_proba'))
+    
+def process_data(dataFrame, name, numChunks, algorithm, featuresX, regressionFeaturesY, classifierFeaturesY,
+	classifierLabelsY, scaleData):
+    print("Processing ", name ,"chunk of size", numChunks)
+    X = dataFrame[0:numChunks][featuresX]
+    if scaleData:
+        X = preprocessing.scale(X)
+    if algorithm == config.REGRESSION:
+        print regressionFeaturesY
+        y = dataFrame[0:numChunks][regressionFeaturesY]
+        if scaleData:
+            y= preprocessing.scale(y)
+    else:
+        y = dataFrame[0:numChunks][classifierFeaturesY]
+        le = preprocessing.LabelEncoder()
+        le.fit(classifierLabelsY)
+        y = le.transform(y.values.ravel())
         
+    return X,y    
 
+def execute_algorithm(df, name, chunk_size, algorithm, featuresX, regressionFeaturesY, classifierFeaturesY,
+	classifierLabelsY, scaleData):
+    
+    if algorithm == config.CLASSIFICATION:        
+        X, y = process_data(df, name, chunk_size, algorithm, featuresX, regressionFeaturesY, classifierFeaturesY,
+	classifierLabelsY, scaleData)
+        #Compute logistic regression
+        print "Classification: \n"
+        print "Logistic regression:"
+        compute_metrics_classification(X, y, linear_model.LogisticRegression())
         
-
+        print "kneighbor classification:"
+        #Compute kneighbor regression
+        compute_metrics_classification(X, y, KNeighborsClassifier(n_neighbors=5))
+        
+    if algorithm == config.REGRESSION:
+        X, y = process_data(df, name, chunk_size, algorithm, featuresX, regressionFeaturesY, classifierFeaturesY,
+	classifierLabelsY, scaleData)
+        print "Regression: \n"
+        print "Linear Regression:"
+        #Compute Linear Regression
+        compute_metrics_regression(X, y, linear_model.LinearRegression())
+        
+        print "Lasso Regression:"
+        #Compute Lasso Regression
+        #sumdataset perfect
+        compute_metrics_regression(X, y, linear_model.Lasso(alpha=0.1))

@@ -1,0 +1,540 @@
+chunk size 100
+dataset sum_with_noise
+Linear Regression
+Root mean square error value:  101271.295486
+Mean Absolute Error value: 75982.1871242
+KNN
+Root mean square error value:  134504.428039
+Mean Absolute Error value: 97177.61
+
+
+Logistic Regression
+accuracy value:  0.886262626263
+f1_macro value:  0.681305469556
+Decision tree classifier
+accuracy value:  0.94202020202
+f1_macro value:  0.869339525284
+
+
+chunk size 500
+dataset sum_with_noise
+Linear Regression
+Root mean square error value:  87425.971982
+Mean Absolute Error value: 65936.9558206
+KNN
+Root mean square error value:  115862.527106
+Mean Absolute Error value: 82914.55
+
+
+Logistic Regression
+accuracy value:  0.91264339582
+f1_macro value:  0.757180210783
+Decision tree classifier
+accuracy value:  0.961913565426
+f1_macro value:  0.884685471442
+
+
+chunk size 1000
+dataset sum_with_noise
+Linear Regression
+Root mean square error value:  83101.8104791
+Mean Absolute Error value: 62385.0687637
+KNN
+Root mean square error value:  101251.272856
+Mean Absolute Error value: 72590.1095
+
+
+Logistic Regression
+accuracy value:  0.901348781937
+f1_macro value:  0.554990229326
+Decision tree classifier
+accuracy value:  0.958219845514
+f1_macro value:  0.88066418687
+
+
+chunk size 5000
+dataset sum_with_noise
+Linear Regression
+Root mean square error value:  83416.1675886
+Mean Absolute Error value: 62624.3958513
+KNN
+Root mean square error value:  107233.840094
+Mean Absolute Error value: 76220.9009
+
+
+Logistic Regression
+accuracy value:  0.902889870238
+f1_macro value:  0.525737482843
+Decision tree classifier
+accuracy value:  0.955995420727
+f1_macro value:  0.85802067747
+
+
+chunk size 10000
+dataset sum_with_noise
+Linear Regression
+Root mean square error value:  83752.1053024
+Mean Absolute Error value: 63020.2467233
+KNN
+Root mean square error value:  106517.500224
+Mean Absolute Error value: 76151.2456
+
+
+Logistic Regression
+accuracy value:  0.905933805122
+f1_macro value:  0.44606571812
+Decision tree classifier
+accuracy value:  0.957001526606
+f1_macro value:  0.922981092422
+
+
+chunk size 50000
+dataset sum_with_noise
+Linear Regression
+Root mean square error value:  83494.0130853
+Mean Absolute Error value: 62501.041334
+KNN
+Root mean squared error: 103984.95508
+Mean absolute error: 74193.82
+
+
+Logistic Regression
+accuracy value:  0.903928358219
+f1_macro value:  0.521924790556
+Decision tree classifier
+Accuracy score: 0.9564
+F1 score: 0.9564
+
+
+chunk size 100000
+dataset sum_with_noise
+Linear Regression
+Root mean square error value:  83812.6216514
+Mean Absolute Error value: 62747.5384655
+KNN
+Root mean squared error: 104692.120492
+Mean absolute error: 74528.84195
+
+
+Logistic Regression
+accuracy value:  0.904103598516
+f1_macro value:  0.538361179451
+Decision tree classifier
+Accuracy score: 0.956366666667
+F1 score: 0.956366666667
+
+
+chunk size 500000
+dataset sum_with_noise
+Linear Regression
+Root mean square error value:  83618.3529727
+Mean Absolute Error value: 62621.2743009
+KNN
+Root mean squared error: 104261.135979
+Mean absolute error: 74552.4692733
+
+
+Logistic Regression
+accuracy value:  0.904766720422
+f1_macro value:  0.475479649852
+Decision tree classifier
+Accuracy score: 0.956153333333
+F1 score: 0.956153333333
+
+
+chunk size 100
+dataset sum_without_noise
+Linear Regression
+Root mean square error value:  4.28600224981e-10
+Mean Absolute Error value: 3.03116394207e-10
+KNN
+Root mean square error value:  36678.7262932
+Mean Absolute Error value: 27029.445
+
+
+Logistic Regression
+accuracy value:  0.894393939394
+f1_macro value:  0.676878224974
+Decision tree classifier
+accuracy value:  0.991666666667
+f1_macro value:  0.96
+
+
+chunk size 500
+dataset sum_without_noise
+Linear Regression
+Root mean square error value:  5.25287966559e-10
+Mean Absolute Error value: 3.76337993657e-10
+KNN
+Root mean square error value:  12721.3140026
+Mean Absolute Error value: 9998.711
+
+
+Logistic Regression
+accuracy value:  0.922838150645
+f1_macro value:  0.735430004301
+Decision tree classifier
+accuracy value:  0.998039215686
+f1_macro value:  0.965079365079
+
+
+chunk size 1000
+dataset sum_without_noise
+Linear Regression
+Root mean square error value:  7.35340533325e-10
+Mean Absolute Error value: 4.69432052341e-10
+KNN
+Root mean square error value:  9444.34884946
+Mean Absolute Error value: 7410.8575
+
+
+Logistic Regression
+accuracy value:  0.907456667997
+f1_macro value:  0.553705939163
+Decision tree classifier
+accuracy value:  0.996038050407
+f1_macro value:  0.984797186437
+
+
+chunk size 5000
+dataset sum_without_noise
+Linear Regression
+Root mean square error value:  4.19886052053e-10
+Mean Absolute Error value: 2.44162220042e-10
+KNN
+Root mean square error value:  4330.34223378
+Mean Absolute Error value: 3426.3052
+
+
+Logistic Regression
+accuracy value:  0.909042503042
+f1_macro value:  0.505452377299
+Decision tree classifier
+accuracy value:  1.0
+f1_macro value:  1.0
+
+
+chunk size 10000
+dataset sum_without_noise
+Linear Regression
+Root mean square error value:  5.30655716826e-10
+Mean Absolute Error value: 3.15625379699e-10
+KNN
+Root mean square error value:  3897.94806822
+Mean Absolute Error value: 3097.08065
+
+
+Logistic Regression
+accuracy value:  0.911335672321
+f1_macro value:  0.48508344376
+Decision tree classifier
+accuracy value:  1.0
+f1_macro value:  1.0
+
+
+chunk size 50000
+dataset sum_without_noise
+Linear Regression
+Root mean square error value:  7.36388183663e-10
+Mean Absolute Error value: 5.6586933006e-10
+KNN
+Root mean squared error: 3839.56716789
+Mean absolute error: 3054.8897
+
+
+Logistic Regression
+accuracy value:  0.910307350519
+f1_macro value:  0.50681509076
+Decision tree classifier
+Accuracy score: 1.0
+F1 score: 1.0
+
+
+chunk size 100000
+dataset sum_without_noise
+Linear Regression
+Root mean square error value:  7.51196419618e-10
+Mean Absolute Error value: 5.69526840764e-10
+KNN
+Root mean squared error: 3800.91171091
+Mean absolute error: 3024.8439
+
+
+Logistic Regression
+accuracy value:  0.909243056953
+f1_macro value:  0.518284438518
+Decision tree classifier
+Accuracy score: 1.0
+F1 score: 1.0
+
+
+chunk size 500000
+dataset sum_without_noise
+Linear Regression
+Root mean square error value:  1.568715873e-09
+Mean Absolute Error value: 1.15264425786e-09
+KNN
+Root mean squared error: 3784.21497473
+Mean absolute error: 3014.37342333
+
+
+Logistic Regression
+accuracy value:  0.910554611992
+f1_macro value:  0.483521015709
+Decision tree classifier
+Accuracy score: 1.0
+F1 score: 1.0
+
+
+chunk size 100
+dataset skin_nonskin
+Linear Regression
+Root mean square error value:  0.282492772717
+Mean Absolute Error value: 0.160349035192
+KNN
+Root mean square error value:  0.180277563773
+Mean Absolute Error value: 0.035
+
+
+Logistic Regression
+accuracy value:  0.958686868687
+f1_macro value:  0.95119047619
+Decision tree classifier
+accuracy value:  0.959595959596
+f1_macro value:  0.948214285714
+
+
+chunk size 500
+dataset skin_nonskin
+Linear Regression
+Root mean square error value:  0.29160134703
+Mean Absolute Error value: 0.196844141056
+KNN
+Root mean square error value:  0.0894427191
+Mean Absolute Error value: 0.01
+
+
+Logistic Regression
+accuracy value:  0.916
+f1_macro value:  0.86882489873
+Decision tree classifier
+accuracy value:  0.986
+f1_macro value:  0.978223409555
+
+
+chunk size 1000
+dataset skin_nonskin
+Linear Regression
+Root mean square error value:  0.298381836731
+Mean Absolute Error value: 0.201950692195
+KNN
+Root mean square error value:  0.074161984871
+Mean Absolute Error value: 0.007
+
+
+Logistic Regression
+accuracy value:  0.91296129613
+f1_macro value:  0.878357062422
+Decision tree classifier
+accuracy value:  0.98698869887
+f1_macro value:  0.981456080404
+
+
+chunk size 5000
+dataset skin_nonskin
+Linear Regression
+Root mean square error value:  0.281561082779
+Mean Absolute Error value: 0.186114766514
+KNN
+Root mean square error value:  0.0430116263352
+Mean Absolute Error value: 0.0021
+
+
+Logistic Regression
+accuracy value:  0.921409475238
+f1_macro value:  0.882426990096
+Decision tree classifier
+accuracy value:  0.995200392802
+f1_macro value:  0.992702327082
+
+
+chunk size 10000
+dataset skin_nonskin
+Linear Regression
+Root mean square error value:  0.281216222064
+Mean Absolute Error value: 0.18472334864
+KNN
+Root mean square error value:  0.0360555127546
+Mean Absolute Error value: 0.0017
+
+
+Logistic Regression
+accuracy value:  0.9250002551
+f1_macro value:  0.888051585193
+Decision tree classifier
+accuracy value:  0.9967997982
+f1_macro value:  0.995154805369
+
+
+chunk size 50000
+dataset skin_nonskin
+Linear Regression
+Root mean square error value:  0.282872343293
+Mean Absolute Error value: 0.185768842031
+KNN
+Root mean squared error: 0.0282842712475
+Mean absolute error: 0.00113333333333
+
+
+Logistic Regression
+accuracy value:  0.91916
+f1_macro value:  0.878114017808
+Decision tree classifier
+Accuracy score: 0.997266666667
+F1 score: 0.997266666667
+
+
+chunk size 100000
+dataset skin_nonskin
+Linear Regression
+Root mean square error value:  0.282822017595
+Mean Absolute Error value: 0.186445222043
+KNN
+Root mean squared error: 0.0244948974278
+Mean absolute error: 0.0007
+
+
+Logistic Regression
+accuracy value:  0.919259994684
+f1_macro value:  0.879603107428
+Decision tree classifier
+Accuracy score: 0.999
+F1 score: 0.999
+
+
+chunk size 100
+dataset 3d_road_network
+Linear Regression
+Root mean square error value:  8.02745470204
+Mean Absolute Error value: 6.06470817646
+KNN
+Root mean square error value:  6.71875927507
+Mean Absolute Error value: 3.48871965421
+
+
+Logistic Regression
+accuracy value:  0.59
+f1_macro value:  0.482626262626
+Decision tree classifier
+accuracy value:  0.835555555556
+f1_macro value:  0.809100529101
+
+
+chunk size 500
+dataset 3d_road_network
+Linear Regression
+Root mean square error value:  19.409511222
+Mean Absolute Error value: 15.4280824247
+KNN
+Root mean square error value:  8.52429191659
+Mean Absolute Error value: 5.30265943662
+
+
+Logistic Regression
+accuracy value:  0.527370948379
+f1_macro value:  0.426577331536
+Decision tree classifier
+accuracy value:  0.827370948379
+f1_macro value:  0.815884044739
+
+
+chunk size 1000
+dataset 3d_road_network
+Linear Regression
+Root mean square error value:  18.4438071911
+Mean Absolute Error value: 13.8792661959
+KNN
+Root mean square error value:  10.2662825802
+Mean Absolute Error value: 6.22705948222
+
+
+Logistic Regression
+accuracy value:  0.495
+f1_macro value:  0.415202136758
+Decision tree classifier
+accuracy value:  0.64
+f1_macro value:  0.639016821526
+
+
+chunk size 5000
+dataset 3d_road_network
+Linear Regression
+Root mean square error value:  17.7465871848
+Mean Absolute Error value: 14.0071760629
+KNN
+Root mean square error value:  13.0129521571
+Mean Absolute Error value: 8.4427430468
+
+
+Logistic Regression
+accuracy value:  0.4118
+f1_macro value:  0.324554352414
+Decision tree classifier
+accuracy value:  0.5954
+f1_macro value:  0.575058833724
+
+
+chunk size 10000
+dataset 3d_road_network
+Linear Regression
+Root mean square error value:  18.4149039932
+Mean Absolute Error value: 14.5138778989
+KNN
+Root mean square error value:  13.5073152344
+Mean Absolute Error value: 8.75271274106
+
+
+Logistic Regression
+accuracy value:  0.4036
+f1_macro value:  0.345408885358
+Decision tree classifier
+accuracy value:  0.5923
+f1_macro value:  0.590557226588
+
+
+chunk size 50000
+dataset 3d_road_network
+Linear Regression
+Root mean square error value:  18.2394262703
+Mean Absolute Error value: 14.5416039552
+KNN
+Root mean squared error: 1.70232166948
+Mean absolute error: 0.792613177462
+
+
+Logistic Regression
+accuracy value:  0.37038
+f1_macro value:  0.341936188168
+Decision tree classifier
+Accuracy score: 0.954333333333
+F1 score: 0.954333333333
+
+
+chunk size 100000
+dataset 3d_road_network
+Linear Regression
+Root mean square error value:  18.7031595965
+Mean Absolute Error value: 14.9642557181
+KNN
+Root mean squared error: 1.577345958
+Mean absolute error: 0.745449889396
+
+
+Logistic Regression
+accuracy value:  0.37462
+f1_macro value:  0.337046797658
+Decision tree classifier
+Accuracy score: 0.9597
+F1 score: 0.9597
+
+
